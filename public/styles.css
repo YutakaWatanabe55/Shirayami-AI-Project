@@ -1,0 +1,116 @@
+﻿:root {
+  color-scheme: light;
+  --bg: #f4f8ff;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --sub: #334155;
+  --accent: #0f766e;
+  --line: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #dff7f2 0%, var(--bg) 45%, #eef3ff 100%);
+}
+
+.container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.note {
+  color: var(--sub);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button[disabled] {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+pre {
+  margin-top: 6px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 700px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    margin-top: 14px;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}

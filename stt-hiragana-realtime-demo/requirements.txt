@@ -1,0 +1,6 @@
+﻿# Python dependencies for STT + hiragana pipeline
+faster-whisper
+pykakasi
+cutlet
+fugashi
+unidic-lite
